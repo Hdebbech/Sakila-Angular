@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Film } from '../film';
 import { FilmService } from './film.service';
+import { faUsers } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-film-grid',
@@ -9,6 +10,7 @@ import { FilmService } from './film.service';
 })
 export class FilmGridComponent implements OnInit {
 
+  rentalsIcon = faUsers;
   films: Film[] = null as any;
   @Input() category: string = null as any;
   @Input() heading: string = null as any;

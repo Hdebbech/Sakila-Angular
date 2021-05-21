@@ -9,6 +9,7 @@ import { FilmDetailsComponent } from './film-details/film-details.component';
 import { RouterModule } from '@angular/router';
 import { FilmGridComponent } from './film-grid/film-grid.component';
 import { FilmCategoryFullListComponent } from './film-category-full-list/film-category-full-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FilmCategoryFullListComponent } from './film-category-full-list/film-ca
     FilmCategoryFullListComponent
   ],
   imports: [
+    FontAwesomeModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,

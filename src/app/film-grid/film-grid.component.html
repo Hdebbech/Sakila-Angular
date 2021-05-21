@@ -14,7 +14,9 @@
                             </span></a></small>
                 </p>
                 <div class="fild-card-footer">
-                    <p>Rented ({{film.rentals}})</p>
+                    <p>
+                        <fa-icon [icon]="rentalsIcon"></fa-icon><span> {{film.rentals}}</span>
+                    </p>
                     <a class="price" href="#">{{film.price | currency}}</a>
                 </div>
             </div>
