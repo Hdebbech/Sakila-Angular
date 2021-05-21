@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "872261f2-682d-4df7-9943-1c5e3564ffdd"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -65,7 +68,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sakila-angular:build"
+            "browserTarget": "sakila-angular:build",
           },
           "configurations": {
             "production": {

@@ -1,0 +1,50 @@
+<div class="film-details-container">
+    <div *ngIf="film" class="film-details-card">
+        <div class="film-details-main">
+            <div>
+                <img [src]="'/assets/img/alt.png'" />
+            </div>
+            <div class="right-hand-to-img">
+                <h3>{{film.name}}</h3>
+                <div class="film-year-duration-category-rentals">
+                    <div>
+                        <span class="film-year">{{film.releaseYear}}</span>
+                        <span class="film-duration">{{film.duration | filmDuration}}</span>
+                        <br>
+                        <small><span class="film-category">{{film.categories}}</span>
+                        </small>
+                    </div>
+                    <div class="rentals">
+                        Rentals (354)
+                    </div>
+                </div>
+
+                <div class="film-languages">
+                    <div>
+                        <h5>Language</h5>
+                        <small>{{film.language}}</small>
+                    </div>
+                    <div class="rent-button">
+                        <button>Rent {{film.price | currency}}</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="film-casting">
+            <div>
+                <p>
+                    {{film.description}}
+                </p>
+                <h4>Casting</h4>
+                <p><a *ngFor="let actor of film.actors; let $last = last" href="#">{{actor | titlecase}}<span
+                            *ngIf="!$last">,
+                        </span></a>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>

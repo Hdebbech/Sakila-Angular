@@ -1,0 +1,10 @@
+<div *ngIf="category; else elseBlock" class="films">
+    <app-film-grid [heading]="'All ' + category + ' films'" [category]="category" [limit]=0></app-film-grid>
+</div>
+
+<ng-template #elseBlock>
+    <div class="films">
+        <app-film-grid [heading]="'Top Sales'" [category]="'Top Sales'" [limit]=10></app-film-grid>
+        <app-film-grid [heading]="'Family Night'" [category]="'Family'" [limit]=10></app-film-grid>
+    </div>
+</ng-template>

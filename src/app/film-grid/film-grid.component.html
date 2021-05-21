@@ -1,0 +1,23 @@
+<div class="films">
+    <div class="heading">
+        <h1>{{heading}}</h1>
+        <h1 *ngIf="limit > 0">See all</h1>
+    </div>
+
+    <div class="film-grid">
+        <div *ngFor="let film of films" class="film-card">
+            <img [src]="'/assets/img/alt.png'">
+            <div class="film-card-description">
+                <p><a [routerLink]="['/films', film.id]" [title]="film.name" class="title">{{film.name | lowercase}}</a>
+                    <small><a *ngFor="let category of film.categories; let $last=last" [routerLink]="['/films']"
+                            [queryParams]="{ category: category}">{{category}}<span *ngIf="!$last">,
+                            </span></a></small>
+                </p>
+                <div class="fild-card-footer">
+                    <p>Rented ({{film.rentals}})</p>
+                    <a class="price" href="#">{{film.price | currency}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

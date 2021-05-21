@@ -1,0 +1,71 @@
+.films {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    max-width: 1800px;
+}
+
+.film-grid {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1800px;
+}
+
+.film-card {
+    background-color: white;
+    width: 160px;
+    height: 330px;
+    margin: 10px;
+    max-width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.film-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.film-card img {
+    max-width: 100%;
+    height: 230px;
+}
+
+.film-card-description {
+    padding: 10px;
+}
+
+.film-card-description p {
+    margin-top: 0;
+}
+
+.film-card-description a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.fild-card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.price {
+    color: red;
+}
+
+.title {
+    color: #333;
+    text-transform: capitalize;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

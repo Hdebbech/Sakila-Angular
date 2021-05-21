@@ -1,0 +1,69 @@
+.film-details-container {
+    display: flex;
+    justify-content: center;
+    background-color: #eee;
+}
+
+.film-details-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    max-width: 720px;
+    background-color: white;
+}
+
+.film-details-main {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+}
+
+.film-details-main img {
+    height: auto;
+    width: 200px;
+    padding-right: 20px;
+}
+
+.film-year {
+    margin-right: 5px;
+}
+
+.rentals {
+    margin-left: auto;
+}
+
+.film-year-duration-category-rentals {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 5px;
+}
+
+.film-duration {
+    margin-right: 5px;
+}
+
+.film-casting {
+    padding: 30px;
+}
+
+.film-languages {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.film-languages * {
+    margin: 0px;
+}
+
+.right-hand-to-img {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rent-button {
+    margin-left: auto;
+}
