@@ -12,12 +12,19 @@
                         <span class="film-duration">{{film.duration | filmDuration}}</span>
                         <br>
                         <small><span class="film-category">{{film.categories}}</span>
+
                         </small>
                     </div>
+
                     <div class="rentals">
-                        Rentals (354)
+                        <fa-icon [icon]="rentalsIcon"></fa-icon><span> {{film.rentals}}</span>
                     </div>
                 </div>
+
+                <h5 style="margin-bottom: 0px;">Special Features</h5>
+                <small><span *ngFor="let feature of film.specialFeatures; let $last = last" href="#">{{feature |
+                        titlecase}}<span *ngIf="!$last">,
+                        </span></span></small>
 
                 <div class="film-languages">
                     <div>

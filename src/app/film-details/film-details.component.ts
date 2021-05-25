@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FilmService } from '../film-grid/film.service';
+import { faUsers } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-film-details',
@@ -10,6 +11,7 @@ import { FilmService } from '../film-grid/film.service';
 export class FilmDetailsComponent implements OnInit {
 
   film: any;
+  rentalsIcon = faUsers;
 
   constructor(
     private route: ActivatedRoute,

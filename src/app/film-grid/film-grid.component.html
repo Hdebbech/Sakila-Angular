@@ -1,7 +1,7 @@
 <div class="films">
     <div class="heading">
         <h1>{{heading}}</h1>
-        <h1 *ngIf="limit > 0">See all</h1>
+        <h1 *ngIf="limit > 0"><a [routerLink]="['/films']" [queryParams]="{ category: category}">See all</a></h1>
     </div>
 
     <div class="film-grid">

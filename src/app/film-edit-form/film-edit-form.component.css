@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     background-color: #eee;
-    margin-top: 20px;
+    max-width: 100%;
 }
 
 .film-details-card {
@@ -53,6 +53,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .film-languages * {
@@ -67,4 +68,57 @@
 
 .rent-button {
     margin-left: auto;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    padding: 12px 16px;
+    transform: translate(0%, -50%);
+}
+
+.close:hover {
+    background: #bbb;
+}
+
+.removed {
+    display: none;
+}
+
+.close1 {
+    cursor: pointer;
+}
+
+.actor {
+    display: inline-block;
+    padding: 0 25px;
+    margin: 5px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #008299;
+    color: white;
+}
+
+.actor-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.chips {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 20px;
+    display: block;
+    width: 400px;
+    max-width: 100%;
+}
+
+input {
+    max-width: fit-content;
 }

@@ -1,0 +1,55 @@
+<div class="film-details-container">
+    <div *ngIf="film" class="film-details-card">
+        <div class="film-details-main">
+            <div>
+                <img [src]="'/assets/img/alt.png'" />
+            </div>
+            <div class="right-hand-to-img">
+                <h3>Edit Movie</h3>
+                <input type="text" id="fname" name="fname" [(ngModel)]="film.name" placeholder="Film Name">
+                <div class="film-year-duration-category-rentals">
+                    <div>
+                        <input class="film-year" [(ngModel)]="film.releaseYear" placeholder="film release year">
+                        <input class="film-duration" [(ngModel)]="film.duration" placeholder="film duration in minutes">
+                        <br>
+                        <small><input class="film-category" [(ngModel)]="film.categories">
+                        </small>
+                    </div>
+                </div>
+
+                <div class="film-languages">
+                    <div>
+                        <input type="text" [(ngModel)]="film.language" placeholder="language">
+                    </div>
+                    <div class="rent-button">
+                        <input type="text" [(ngModel)]="film.price" placeholder="price">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="film-casting">
+            <div>
+
+                <p>
+                    <textarea style="width: 90%;height: 100px;">{{film.description}}</textarea>
+                </p>
+                <h4>Casting</h4>
+                <ul class="actor-list">
+                    <ng-container *ngFor="let item of film.actors">
+                        <li class="actor">
+                            <span>{{item| titlecase}}</span><span class="close1" (click)="clickEvent($event)">
+                                &times;</span>
+                        </li>
+                    </ng-container>
+                    <li class="actor"><input type="text" (keyup.enter)="onEnter($event)"></li>
+                </ul>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

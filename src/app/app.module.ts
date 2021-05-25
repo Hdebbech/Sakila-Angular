@@ -10,6 +10,11 @@ import { RouterModule } from '@angular/router';
 import { FilmGridComponent } from './film-grid/film-grid.component';
 import { FilmCategoryFullListComponent } from './film-category-full-list/film-category-full-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FilmEditFormComponent } from './film-edit-form/film-edit-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatChipsModule } from '@angular/material/chips';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,9 +23,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FilmDurationPipe,
     FilmDetailsComponent,
     FilmGridComponent,
-    FilmCategoryFullListComponent
+    FilmCategoryFullListComponent,
+    NavbarComponent,
+    FilmEditFormComponent
   ],
   imports: [
+    FormsModule,
+    MatChipsModule,
     FontAwesomeModule,
     BrowserModule,
     HttpClientModule,
@@ -28,8 +37,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     RouterModule.forRoot([
       { path: '', component: FilmsComponent },
       { path: 'films', component: FilmsComponent },
-      { path: 'films/:filmId', component: FilmDetailsComponent }
-    ])
+      { path: 'films/:filmId', component: FilmDetailsComponent },
+      { path: 'films/:filmId/edit', component: FilmEditFormComponent }
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
